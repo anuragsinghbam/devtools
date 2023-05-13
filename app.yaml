@@ -1,0 +1,18 @@
+runtime: python38
+
+instance_class: F4
+
+automatic_scaling:
+  max_pending_latency: 1s
+
+luci_gae_vars:
+  chrome-devtools-frontend-hrd:
+    LOCAL_BUCKET: chrome-devtools-frontend-local-bucket
+  chrome-devtools-frontend-stg:
+    LOCAL_BUCKET: chrome-devtools-frontend-local-bucket-stg
+
+env_variables:
+  LOCAL_BUCKET: ${LOCAL_BUCKET}
+
+build_env_variables:
+  PIP_NO_DEPS: 1

@@ -1,0 +1,12 @@
+# This file is consumed by LUCI CD system to automate deployment of
+# DevTools Frontend.
+#
+# See https://ci.chromium.org/p/infra-internal/builders/prod/chrome-devtools-frontend-tarballs-continuous
+
+name: chrome-devtools-frontend
+
+contextdir: ../
+
+infra:
+  prod:
+    storage: gs://chrome-devtools-frontend-build-artifacts/gae
